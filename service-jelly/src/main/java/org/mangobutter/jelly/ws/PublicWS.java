@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -22,7 +21,7 @@ public class PublicWS {
 	protected ApplicationContext context;
 	
 	@RequestMapping(value = "service", method = RequestMethod.POST)
-	public @ResponseBody Response service(@RequestBody Request request){
+	public Response service(@RequestBody Request request){
 		Response response = new Response();
 		
 		String service = (String) request.getParams().get("service");
