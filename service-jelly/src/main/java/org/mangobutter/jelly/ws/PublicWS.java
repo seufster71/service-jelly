@@ -20,7 +20,7 @@ public class PublicWS {
 	@Inject
 	protected ApplicationContext context;
 	
-	@RequestMapping(value = "service", method = RequestMethod.POST)
+	@RequestMapping(value = "service", method = RequestMethod.POST, produces = "application/json")
 	public Response service(@RequestBody Request request){
 		Response response = new Response();
 		
